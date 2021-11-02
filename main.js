@@ -5,7 +5,13 @@ $(document).ready(function () {
         
         tasks.push(newTask);
     
-        console.log(`Tenemos las siguientes tareas en la lista: ${tasks}`);
+        $('#taskList').empty()
+        
+tasks.forEach( t => 
+    $('#taskList').append(
+        `<div class="task">${t}</div>`
+    )
+);(`Tenemos las siguientes tareas en la lista: ${tasks}`);
         
     })
 });
